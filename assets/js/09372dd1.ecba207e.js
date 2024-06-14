@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgrc=self.webpackChunkgrc||[]).push([[1533],{8242:e=>{e.exports=JSON.parse('{"label":"newsletter","permalink":"/newsletter/tags/newsletter","allTagsPath":"/newsletter/tags","count":1,"unlisted":false}')}}]);
