@@ -26,6 +26,13 @@ export type MemberLinkType =
   | "twitter"
   | "scholar";
 
+export type MemberType =
+  | "researcher"
+  | "engineer"
+  | "visiting"
+  | "external"
+  | "faculty";
+
 export type Member = {
   affiliation?: string;
   advisor?: string;
@@ -34,8 +41,14 @@ export type Member = {
   links?: Record<MemberLinkType, string>;
   name: string;
   researchInterests?: string[];
+  slug: string;
   title: string;
-  type: "researcher" | "engineer" | "visiting" | "external";
+  type: MemberType;
+};
+
+export type Faculty = Member & {
+  order: number;
+  type: "faculty";
 };
 
 export type ProjectId =
@@ -45,6 +58,7 @@ export type ProjectId =
   | "dtio"
   | "hermes"
   | "iris"
+  | "iowarp"
   | "labios"
   | "optmem"
   | "storehub"
@@ -60,11 +74,13 @@ export type Project = {
   link: string;
   isCollaborative?: boolean;
   isFeatured?: boolean;
-  isOpenSource?: boolean;
   isOurs?: boolean;
   researchStatus: "ready" | "testing" | "r&d";
+  sourceLink?: string;
   status: "active" | "archived";
+  tutorialLink?: string;
   type: "funded" | "student";
+  order?: number;
 };
 
 export type PublicationAuthor =
@@ -79,6 +95,7 @@ export type PublicationAuthor =
   | "A. Haider"
   | "A. Kougkas"
   | "A. Kravtsov"
+  | "A. Maurya"
   | "A. Nigmetov"
   | "A. R. Blatecky"
   | "A. Torres"
@@ -106,6 +123,7 @@ export type PublicationAuthor =
   | "C.-Z. Xu"
   | "D. Buettner"
   | "D. Buono"
+  | "D. Cheng"
   | "D. Fan"
   | "D. Feng"
   | "D. Georgakopoulos"
@@ -140,6 +158,7 @@ export type PublicationAuthor =
   | "H. Che"
   | "H. Devarajan"
   | "H. Eslami"
+  | "H. Geng"
   | "H. Jin"
   | "H. Lee"
   | "H. Najafi"
@@ -213,6 +232,7 @@ export type PublicationAuthor =
   | "M. Lang"
   | "M. Macalik"
   | "M. Mubarak"
+  | "M. Niemier"
   | "M. Noelle"
   | "M. Pantano"
   | "M. Papka"
@@ -321,6 +341,7 @@ export type PublicationAuthor =
   | "X. Fan"
   | "X. Feng"
   | "X. He"
+  | "X. Hu"
   | "X. Huang"
   | "X. Li"
   | "X. Liao"
@@ -349,6 +370,7 @@ export type PublicationAuthor =
   | "Y. Lu"
   | "Y. Luo"
   | "Y. Wang"
+  | "Y. Wu"
   | "Y. Xu"
   | "Y. Yan"
   | "Y. Yin"
@@ -361,6 +383,7 @@ export type PublicationAuthor =
   | "Z. Li"
   | "Z. Pan"
   | "Z. Tang"
+  | "Z. Tian"
   | "Z. Wang"
   | "Z. Xu"
   | "Z. Ye"
@@ -421,6 +444,7 @@ export type PublicationTag =
   | "Data Reorganization"
   | "Data Replication"
   | "Data Scoring"
+  | "Data Stacks"
   | "Data Streaming"
   | "Data-Aware"
   | "Data-Centric"
@@ -459,6 +483,7 @@ export type PublicationTag =
   | "GPU"
   | "Graph Applications"
   | "Graph Computing"
+  | "Graph Mining"
   | "Graph Pattern Matching"
   | "HDF5"
   | "HPC"
@@ -466,6 +491,7 @@ export type PublicationTag =
   | "HPC Data Containers"
   | "Hardware"
   | "Hardware Abstraction"
+  | "Hardware Acceleration"
   | "Hermes"
   | "Heterogeneous Buffering"
   | "Heterogeneous I/O"
@@ -495,6 +521,8 @@ export type PublicationTag =
   | "Integrated Workflow"
   | "Intelligent Selection"
   | "KV Cache"
+  | "KV Cache Profiling"
+  | "KV Cache Access Pattern Analysis"
   | "KVS"
   | "Label-Based I/O"
   | "Large-Scale I/O"
@@ -518,6 +546,7 @@ export type PublicationTag =
   | "Memory Management"
   | "Memory Mapped I/O"
   | "Memory Performance Model"
+  | "Memory System Optimization"
   | "Memory Stall Time"
   | "Memory-Bounded Speedup"
   | "Memory-Wall"
@@ -570,6 +599,8 @@ export type PublicationTag =
   | "Swapping"
   | "Synchronization"
   | "System Software"
+  | "Systems for AI Workflows"
+  | "Task Systems"
   | "Task-Based I/O"
   | "Tensor"
   | "TensorFlow"
@@ -604,4 +635,7 @@ export type Publication = {
   date: string;
   tags: PublicationTag[];
   links: Record<string, string>;
+  abstract?: string;
+  doi?: string;
+  slug: string;
 };

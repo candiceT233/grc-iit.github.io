@@ -40,6 +40,10 @@ const config = {
     locales: ["en"],
   },
 
+  markdown: {
+    mermaid: true,
+  },
+
   presets: [
     [
       "classic",
@@ -68,6 +72,8 @@ const config = {
       }),
     ],
   ],
+
+  themes: ['@docusaurus/theme-mermaid'],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -156,8 +162,8 @@ const config = {
             position: "left",
           },
           {
-            to: "/jobs",
-            label: "Jobs",
+            to: "/opportunities",
+            label: "Opportunities",
             position: "left",
           },
           // {
@@ -197,7 +203,7 @@ const config = {
               {
                 html: `
                   <p>
-                    Email: <a href="mailto:grc@iit.edu" target="_blank" rel="noopener noreferrer">grc@iit.edu</a> <br />
+                    Email: <a href="mailto:grc@illinoistech.edu" target="_blank" rel="noopener noreferrer">grc@illinoistech.edu</a> <br />
                     Phone: <a href="tel:3125676885" target="_blank" rel="noopener noreferrer">+1 312 567 6885</a>
                   </p>
                 `,
@@ -208,11 +214,15 @@ const config = {
             title: "Featured Projects",
             items: [
               {
+                label: "IOWarp",
+                to: "/research/projects/iowarp",
+              },
+              {
                 label: "ChronoLog",
                 to: "/research/projects/chronolog",
               },
               {
-                label: "Labios",
+                label: "LABIOS",
                 to: "/research/projects/labios",
               },
               {
@@ -253,6 +263,10 @@ const config = {
           {
             title: "Links",
             items: [
+              {
+                label: "GRC Careers",
+                to: "/careers",
+              },
               {
                 label: "GRC GitHub",
                 href: "https://github.com/grc-iit",
@@ -307,6 +321,11 @@ const config = {
         path: "./newsletter",
       },
     ],
+    "./plugins/affiliations",
+    "./plugins/faculty",
+    "./plugins/members",
+    "./plugins/projects",
+    "./plugins/publications",
   ],
 };
 
