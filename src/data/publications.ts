@@ -540,7 +540,7 @@ const publications: Publication[] = [
       "A. Kougkas",
       "X.-H. Sun",
     ],
-    title: "Data Lifecycles: Optimizing Workflow Task & Data Coordination",
+    title: "Data Flow Lifecycles for Optimizing Workflow Coordination",
     venue:
       "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'23), November 12-17, 2023",
     type: "Conference",
@@ -5441,6 +5441,56 @@ const publications: Publication[] = [
     date: "May, 1991",
     tags: [],
     links: {},
+  },
+  {
+    authors: [
+      
+      "N. Tallent",
+      "A. Kougkas",
+      "X.-H. Sun",
+    ],
+    title: "Optimizing Workflow Performance by Elucidating Semantic Data Flow",
+    venue: "The International Conference for High Performance Computing, Networking, Storage and Analysis (SC'23)",
+    type: "Poster",
+    date: "November, 2023",
+    tags: [
+      "HPC Analysis",
+      "I/O",
+      "Workflow Optimization",
+      "Data Analytics",
+      "Performance Measurement",
+    ],
+    links: {
+      poster: "http://cs.iit.edu/~scs/assets/files/tang2023semantic_poster.pdf",
+      "extended abstract": "http://cs.iit.edu/~scs/assets/files/tang2023semantic_abstract.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/tang2023semantic.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/tang2023semantic.txt",
+    },
+  },
+  {
+    authors: [
+      "M. Tang",
+      "L. Guo", 
+      "N. Tallent",
+      "A. Kougkas",
+      "X.-H. Sun",
+    ],
+    title: "Analyzing I/O Patterns and Dataflow in HPC Workflows",
+    venue: "The 37h International Conference on Scalable Scientific Data Management (SSDBM 2025)",
+    type: "Poster",
+    date: "June, 2025",
+    tags: [
+      "HPC Analysis",
+      "I/O",
+      "Workflow Optimization",
+      "Data Analytics",
+      "Performance Measurement",
+    ],
+    links: {
+      poster: "http://cs.iit.edu/~scs/assets/files/tang2025ioworkflow_poster.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/tang2025ioworkflow.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/tang2025ioworkflow.txt",
+    },
   },
 ];
 
